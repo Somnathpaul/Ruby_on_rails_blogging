@@ -1,6 +1,6 @@
 <h1>Listing Articles</h1>
 <p>
-  <h5><%= link_to 'Create new article', new_article_path %> </h5>
+  <h3><%= link_to '📝 Create new article', new_article_path %> </h3>
 </p>
 
 <table>
@@ -14,8 +14,9 @@
     <tr>
       <td><%= article.title %></td>
       <td><%= article.description %></td>
-      <td><%= link_to 'View', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td><%= link_to '📗 View', article_path(article) %></td>
+      <td></td>
+      <td><%= link_to '✏️ Edit', edit_article_path(article) %></td>
     </tr>
   <% end %>
 </table>
