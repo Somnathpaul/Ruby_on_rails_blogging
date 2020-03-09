@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
+
+  def index
+    @article = Article.all
+  end
+
     # GET: [to generate new articles]
     def new
        @article = Article.new 
-    end
-
-    def index
-      @article = Article.all
     end
 
     # POST:  [to create new articles]
