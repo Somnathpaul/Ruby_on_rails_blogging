@@ -29,6 +29,23 @@ class ArticlesController < ApplicationController
             @article = Article.find(params[:id])
           end
 
+          # PUT : [edit]
+          def edit
+            @article = Article.find(params[:id])
+          end
+          
+          # Edit is handel by the update action
+          def update
+            @article = Article.find(params[:id])
+            if @article.update(article_params)
+              # flash message if article gets update
+              flash[:notice] = "Article was updated"
+              redirect_to article_path(@article)
+            else
+              render 'edit'
+           end
+          end
+
           
     private
       def article_params
