@@ -4,14 +4,10 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-// Bootstrap files should be added here:
-
-//= require jquery3
-//= require popper
-//= require bootstrap-sprockets
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+import "bootstrap"
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
