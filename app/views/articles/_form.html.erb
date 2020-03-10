@@ -1,0 +1,27 @@
+<!-- as the edit and submit form are same-->
+<% if @article.errors.any? %>
+<h3>The following errors prevented the article from getting created</h3>
+<ul>
+ <% @article.errors.full_messages.each do |msg| %>
+   <li><%= msg %>
+ <% end %>
+ </ul>
+<% end %>
+
+<%= form_for @article do |f|%>
+  <p>
+   <%= f.label :title%> </br>
+   <%= f.text_field :title%>
+  </p>
+  <p>
+   <%= f.label :description%> </br>
+   <%= f.text_area :description%>
+  </p>
+  <p>
+   <%= f.submit%>
+  </p>
+<% end %>
+
+<p>
+  <h5><%= link_to '◀️ Back to articles', articles_path %> </h5>
+</p>
