@@ -20,9 +20,9 @@
     <tr>
       <td><%= article.title %></td>
       <td><%= article.description %></td>
-      <td><%= link_to '📗 View', article_path(article) %></td>
-      <td><%= link_to '✏️ Edit', edit_article_path(article) %></td>
-      <td><%= link_to '🗑 Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?" } %></td>
+      <td><a><%= link_to '📗 View', article_path(article), class: "btn btn-outline-success" %> </a></td>
+      <td><%= link_to '✏️ Edit', edit_article_path(article), class: "btn btn-outline-warning" %> </a></td>
+      <td><%= link_to '🗑 Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-outline-danger" %></td>
     </tr>
   <% end %>
 </table>
