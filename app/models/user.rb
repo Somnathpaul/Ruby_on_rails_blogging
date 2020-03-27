@@ -6,6 +6,9 @@ class User < ApplicationRecord
     length: {minimum: 3, maximum: 25}, 
     uniqueness: { case_sensitive: false }
 
+    # email validation with regex
+    VALID_EMAIL_REGEX: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
     validates :email,
     presence: true,
     length: {minimum: 3, maximum: 64}, 
